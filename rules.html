@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rulebook</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen and (orientation:portrait)"/>
+    <script src="common.js"></script>
+    <script>
+        // Function to save checkbox state to local storage
+        function saveCheckboxState() {
+            var checkbox = document.getElementById("checkFifa");
+            localStorage.setItem("checkboxState", checkbox.checked);
+        }
+
+        // Function to load checkbox state from local storage
+        function loadCheckboxState() {
+            var checkbox = document.getElementById("checkFifa");
+            var checked = JSON.parse(localStorage.getItem("checkboxState"));
+            checkbox.checked = checked;
+        }
+
+        // Load checkbox state when the page loads
+        window.addEventListener("load", function() {
+            loadCheckboxState(); // Load checkbox state first
+            // Add event listener to save checkbox state when it changes
+            document.getElementById("checkFifa").addEventListener("change", saveCheckboxState);
+        });
+    </script>
+</head>
+<body>
+    <a href="index.html">Home</a>
+    <h3>Hit</h3>
+    <input type="number" placeholder="2">
+    <h3>Sink</h3>
+    <input type="number" placeholder="3">
+    <h3>Field Goal</h3>
+    <input type="number" placeholder="2">
+    <h3>Fifa</h3>
+    <input type="checkbox" id="checkFifa">
+    
+    <h1>Rules</h1>
+    <input type="text" placeholder="First team to 12 wins, Win by 2, Laddered FIFA">
+</body>
+</html>

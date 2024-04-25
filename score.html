@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Score</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen and (orientation:portrait)"/>
+    <script src="common.js"></script>
+    <script>
+        // Function to show/hide FIFA buttons based on checkbox state
+        function toggleFifaButtons() {
+            var checkboxState = localStorage.getItem("checkboxState");
+            if (checkboxState == "true") {
+                document.getElementById("fifaButton1").style.visibility = "visible";
+                document.getElementById("fifaButton2").style.visibility = "visible";
+                document.getElementById("fifaCounter1").style.visibility = "visible";
+                document.getElementById("fifaCounter2").style.visibility = "visible";
+            } else {
+                document.getElementById("fifaButton1").style.visibility = "hidden";
+                document.getElementById("fifaButton2").style.visibility = "hidden";
+                document.getElementById("fifaCounter1").style.visibility = "hidden";
+                document.getElementById("fifaCounter2").style.visibility = "hidden";
+            }
+        }
+
+        // Load checkbox state when the page loads
+        window.addEventListener("load", toggleFifaButtons);
+    </script>
+</head>
+
+<body>
+    <a href="index.html">Home</a>
+    <input type="text" placeholder="Team 1">
+    <input type="text" placeholder="Team 2">
+    <span id="counter1">0</span>
+    <span id="counter2">0</span>
+    <div>
+        <button class="one" onclick="incrementCounter1(this)">+1</button>
+        <button class="hit" onclick="incrementCounter1(this)">Hit</button>
+        <button class="sink" onclick="incrementCounter1(this)">Sink</button>
+        <button class="fgoal" onclick="incrementCounter1(this)">Field Goal</button>
+        <button id="fifaButton1" onclick="incrementCounter1(this)">Fifa</button>
+        <span id="fifaCounter1">0</span>
+        <button id="undo1" onclick="undo1()">Undo</button>
+    </div>
+    <div>
+        <button class="one" onclick="incrementCounter2(this)">+1</button>
+        <button class="hit" onclick="incrementCounter2(this)">Hit</button>
+        <button class="sink" onclick="incrementCounter2(this)">Sink</button>
+        <button class="fgoal" id="fgoal" onclick="incrementCounter2(this)">Field Goal</button>
+        <button id="fifaButton2" onclick="incrementCounter2(this)">Fifa</button>
+        <span id="fifaCounter2">0</span>
+        <button id="undo1" onclick="undo2()">Undo</button>
+    </div>
+</body>

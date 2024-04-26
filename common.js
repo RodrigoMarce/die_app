@@ -25,7 +25,7 @@ function incrementCounter1(btn) {
     }
     counterElement.innerText = currentCount + add;
     if (currentCount + add >= 12) {
-        alert("Team 2 wins! REDEMPTION TIME!")
+        alert("Team 1 wins! REDEMPTION TIME!")
     }
 }
 

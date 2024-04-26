@@ -73,15 +73,12 @@
         
         var hitValue = document.getElementById("hit").value;
         localStorage.setItem("hitValue", hitValue);
-        document.getElementById("hit").placeholder = hitValue;
 
         var fGoalValue = document.getElementById("fGoal").value;
         localStorage.setItem("fGoalValue", fGoalValue);
-        document.getElementById("fGoal").placeholder = hitValue;
 
         var sinkValue = document.getElementById("sink").value;
         localStorage.setItem("sinkValue", sinkValue);
-        document.getElementById("sink").placeholder = hitValue;
     }
 
     document.getElementById("valuesForm").addEventListener("submit", handleFormSubmit);

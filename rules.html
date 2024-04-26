@@ -33,6 +33,16 @@
             document.getElementById("fGoal").placeholder = fGoalValue;
         }
 
+        if (localStorage.getItem("hitValue") == null) {
+            localStorage.setItem("hitValue", 2);
+        }
+        if (localStorage.getItem("sinkValue") == null) {
+            localStorage.setItem("sinkValue", 3);
+        }
+        if (localStorage.getItem("fGoalValue") == null) {
+            localStorage.setItem("fGoalValue", 2);
+        }
+
         // Load checkbox state when the page loads
         window.addEventListener("load", function() {
             loadCheckboxState();
@@ -68,9 +78,6 @@
     <input id="rules" type="text" placeholder="First team to 12 wins">
 </body>
 <script>
-    localStorage.setItem("hitValue", 2);
-    localStorage.setItem("fGoalValue", 2);
-    localStorage.setItem("sinkValue", 3);
     function handleFormSubmit(event) {
         event.preventDefault(); 
         

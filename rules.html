@@ -68,6 +68,9 @@
     <input id="rules" type="text" placeholder="First team to 12 wins">
 </body>
 <script>
+    localStorage.setItem("hitValue", 2);
+    localStorage.setItem("fGoalValue", 2);
+    localStorage.setItem("sinkValue", 3);
     function handleFormSubmit(event) {
         event.preventDefault(); 
         

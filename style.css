@@ -43,7 +43,7 @@ input[type="text"] {
 button {
     padding: 25px 150px; 
     margin-right: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -58,14 +58,14 @@ button {
 }
 
 #undo1, #undo2 {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 span {
     font-size: 100px;
     font-weight: bold;
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 #fifaCounter1, #fifaCounter2 {
@@ -103,7 +103,7 @@ button.fgoal {
 /* index page */
 
 h1 {
-    font-size: 200px;
+    font-size: 150px;
     text-align: center;
 }
 
@@ -112,18 +112,19 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
+    margin-top: 10px;
 }
 
 .button-container {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .button {
     display: block;
     width: 40%;
-    margin: 75px auto;
-    padding: 75px;
+    margin: 50px auto;
+    padding: 60px;
     background-color: #4CBB17;
     color: #fff;
     text-decoration: none;
@@ -166,9 +167,9 @@ img {
 }
 
 #rules {
-    width: 90%;
-    margin: 5%;
-    padding-bottom: 300px;
+    width: 93%;
+    margin-left: 3%;
+    padding-bottom: 200px;
 }
 
 form {
@@ -179,7 +180,7 @@ form {
 .form-group {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 label {
@@ -195,7 +196,7 @@ label {
 
 h2 {
     font-size: 90px;
-    margin: 50px;
+    margin: 30px;
 }
 
 input[type="checkbox"] {

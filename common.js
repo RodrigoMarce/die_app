@@ -10,17 +10,23 @@ function incrementCounter1(btn) {
     if (btn.className == "one") {
         add = 1;
     }
-    else if (btn.className == "hit" || btn.className == "fgoal") {
-        add = 2;
+    else if (btn.className == "hit") {
+        add = parseInt(localStorage.getItem("hitValue"));
+    }
+    else if (btn.className == "fgoal") {
+        add = parseInt(localStorage.getItem("fGoalValue"));
     }
     else if (btn.className == "sink") {
-        add = 3;
+        add = parseInt(localStorage.getItem("sinkValue"));
     }
     else if (btn.id == "fifaButton1") {
         add = 1;
         fifaCounter.innerText = parseInt(fifaCounter.innerText) + 1;
     }
     counterElement.innerText = currentCount + add;
+    if (currentCount + add >= 12) {
+        alert("Team 2 wins! REDEMPTION TIME!")
+    }
 }
 
 function incrementCounter2(btn) {
@@ -30,17 +36,23 @@ function incrementCounter2(btn) {
     if (btn.className == "one") {
         add = 1;
     }
-    else if (btn.className == "hit" || btn.className == "fgoal") {
-        add = 2;
+    else if (btn.className == "hit") {
+        add = parseInt(localStorage.getItem("hitValue"));
+    }
+    else if (btn.className == "fgoal") {
+        add = parseInt(localStorage.getItem("fGoalValue"));
     }
     else if (btn.className == "sink") {
-        add = 3;
+        add = parseInt(localStorage.getItem("sinkValue"));
     }
     else if (btn.id == "fifaButton2") {
         add = 1;
         fifaCounter.innerText = parseInt(fifaCounter.innerText) + 1;
     }
     counterElement.innerText = currentCount + add;
+    if (currentCount + add >= 12) {
+        alert("Team 2 wins! REDEMPTION TIME!")
+    }
 }
 
 function undo1() {

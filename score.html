@@ -2,7 +2,7 @@
 
 <head>
     <title>Score</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen and (orientation:portrait)"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/> <!-- media="screen and (orientation:portrait)"/>  -->
     <script src="common.js"></script>
     <script>
         // Function to show/hide FIFA buttons based on checkbox state
@@ -27,12 +27,12 @@
 </head>
 
 <body>
-    <a href="index.html">Home</a>
-    <input type="text" placeholder="Team 1">
-    <input type="text" placeholder="Team 2">
-    <span id="counter1">0</span>
-    <span id="counter2">0</span>
     <div>
+        <a href="index.html">Home</a>
+    </div>
+    <div id="team1">
+        <input class="teamName" type="text" placeholder="Team 1">
+        <span id="counter1">0</span>
         <button class="one" onclick="incrementCounter1(this)">+1</button>
         <button class="hit" onclick="incrementCounter1(this)">Hit</button>
         <button class="sink" onclick="incrementCounter1(this)">Sink</button>
@@ -41,13 +41,15 @@
         <span id="fifaCounter1">0</span>
         <button id="undo1" onclick="undo1()">Undo</button>
     </div>
-    <div>
+    <div id="team2">
+        <input class="teamName" type="text" placeholder="Team 2">
+        <span id="counter2">0</span>
         <button class="one" onclick="incrementCounter2(this)">+1</button>
         <button class="hit" onclick="incrementCounter2(this)">Hit</button>
         <button class="sink" onclick="incrementCounter2(this)">Sink</button>
         <button class="fgoal" id="fgoal" onclick="incrementCounter2(this)">Field Goal</button>
         <button id="fifaButton2" onclick="incrementCounter2(this)">Fifa</button>
         <span id="fifaCounter2">0</span>
-        <button id="undo1" onclick="undo2()">Undo</button>
+        <button id="undo2" onclick="undo2()">Undo</button>
     </div>
 </body>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rulebook</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen and (orientation:portrait)"/>
+    <script src="common.js"></script>
+    <script>
+        // Function to save checkbox state to local storage
+        function saveCheckboxState() {
+            var checkbox = document.getElementById("checkFifa");
+            localStorage.setItem("checkboxState", checkbox.checked);
+        }
+
+        // Function to load checkbox state from local storage
+        function loadCheckboxState() {
+            var checkbox = document.getElementById("checkFifa");
+            var checked = JSON.parse(localStorage.getItem("checkboxState"));
+            checkbox.checked = checked;
+        }
+
+        function loadValuesFromLocalStorage() {
+            var hitValue = localStorage.getItem("hitValue");
+            var sinkValue = localStorage.getItem("sinkValue");
+            var fGoalValue = localStorage.getItem("fGoalValue");
+            
+            document.getElementById("hit").value = hitValue;
+            document.getElementById("hit").placeholder = hitValue;
+            
+            document.getElementById("sink").value = sinkValue;
+            document.getElementById("sink").placeholder = sinkValue;
+            
+            document.getElementById("fGoal").value = fGoalValue;
+            document.getElementById("fGoal").placeholder = fGoalValue;
+        }
+
+        if (localStorage.getItem("hitValue") == null) {
+            localStorage.setItem("hitValue", 2);
+        }
+        if (localStorage.getItem("sinkValue") == null) {
+            localStorage.setItem("sinkValue", 3);
+        }
+        if (localStorage.getItem("fGoalValue") == null) {
+            localStorage.setItem("fGoalValue", 2);
+        }
+
+        // Load checkbox state when the page loads
+        window.addEventListener("load", function() {
+            loadCheckboxState();
+            loadValuesFromLocalStorage();
+            document.getElementById("checkFifa").addEventListener("change", saveCheckboxState);
+        });
+    </script>
+</head>
+<body>
+    <a href="index.html">Home</a>
+    <form id="valuesForm">
+        <div class="form-group">
+            <label for="hit">Hit</label>
+            <input id="hit" type="number" placeholder="2">
+        </div>
+        <div class="form-group">
+            <label for="sink">Sink</label>
+            <input id="sink" type="number" placeholder="3">
+        </div>
+        <div class="form-group">
+            <label for="fGoal">Field Goal</label>
+            <input id="fGoal" type="number" placeholder="2">
+        </div>
+        <div class="form-group">
+            <label for="checkFifa">Fifa</label>
+            <input type="checkbox" id="checkFifa">
+        </div>
+        <button type="submit">Save Changes</button>
+    </form>
+
+    
+    <h2>Rules</h2>
+    <input id="rules" type="text" placeholder="First team to 12 wins">
+</body>
+<script>
+    function handleFormSubmit(event) {
+        event.preventDefault(); 
+        
+        var hitValue = document.getElementById("hit").value;
+        localStorage.setItem("hitValue", hitValue);
+
+        var fGoalValue = document.getElementById("fGoal").value;
+        localStorage.setItem("fGoalValue", fGoalValue);
+
+        var sinkValue = document.getElementById("sink").value;
+        localStorage.setItem("sinkValue", sinkValue);
+    }
+
+    document.getElementById("valuesForm").addEventListener("submit", handleFormSubmit);
+</script>
+</html>
+

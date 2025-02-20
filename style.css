@@ -1,0 +1,205 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
+}
+
+a {
+    font-size: 80px;
+    text-decoration: none;
+    color: #009688; 
+    font-weight: bold;
+    margin: 25px;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+#team1, #team2 {
+    width: 45%; 
+    float: left;
+    padding: 20px;
+    background-color: #FFD54F; 
+    margin: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 50px;
+    text-align: center;
+}
+
+button {
+    padding: 25px 150px; 
+    margin-right: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #009688;
+    color: #FFF;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: calc(25% - 15px); 
+    box-sizing: border-box;
+    font-size: 50px;
+}
+
+#undo1, #undo2 {
+    margin-top: 50px;
+}
+
+span {
+    font-size: 100px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#fifaCounter1, #fifaCounter2 {
+    font-size: 65px;
+}
+
+button.one {
+    background-color: #FF5722; /* Orange background color */
+}
+
+button.hit {
+    background-color: #4CAF50; /* Green background color */
+}
+
+button.sink {
+    background-color: #F44336; /* Red background color */
+}
+
+button.fgoal {
+    background-color: #2196F3; /* Blue background color */
+    white-space: nowrap;
+}
+
+/* Media query for iPhone 6/7/8 */
+@media (max-width: 375px) {
+    #team1, #team2 {
+        padding: 10px; 
+    }
+    button {
+        padding: 12px 16px;
+        font-size: 14px; 
+    }
+}
+
+/* index page */
+
+h1 {
+    font-size: 150px;
+    text-align: center;
+}
+
+img {
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+
+.button-container {
+    margin-top: 40px;
+}
+
+.button {
+    display: block;
+    width: 40%;
+    margin: 50px auto;
+    padding: 60px;
+    background-color: #4CBB17;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 60px;
+    text-align: center;
+}
+
+/* rules page */
+
+#valuesForm {
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+/* Style labels and inputs inside the form */
+#valuesForm label {
+    margin-right: 30px;
+    font-size: 90px;
+}
+
+#valuesForm input {
+    width: 20%; /* Adjust as needed */
+    padding: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 50px;
+    text-align: center;
+}
+
+/* Style the Save Changes button */
+#valuesForm button {
+    width: 40%;
+    padding: 20px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-top: 40px;
+}
+
+#rules {
+    width: 93%;
+    margin-left: 3%;
+    padding-bottom: 200px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+label {
+    width: 66%;
+}
+
+#hit, #sink, #fGoal {
+    padding: 8px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+h2 {
+    font-size: 90px;
+    margin: 30px;
+}
+
+input[type="checkbox"] {
+    width: 75px;
+    height: 75px;
+}

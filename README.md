@@ -16,3 +16,5 @@ My project attempts to solve this by allowing users to keep track of the score f
 ---
 
 This project uses HTML, CSS, and JavaScript.
+
+Click the link in the About section to try it out! Make sure to try it on your phone or toggle the mobile device option using the developer tools on your computer.
